@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="resume, resume sample, student resume" />
+    <meta name="author" content="Nabaraj Malla Thakuri" />
+    <meta
+      name="description"
+      content="This is simple resume that has information about students techinal 
+	skills, work experience, portfolio, and other"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn3.vectorstock.com/i/1000x1000/12/07/resume-icon-vector-22391207.jpg"
+    />
+    <title>Nabaraj Malla Thakuri</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <!-- <img src="" class="logo" /> -->
+          <h1 class="author"><span style="color: #ff004f">N</span>abaraj.</h1>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h2>Hi, I'm <sapn style="color: #ff004f">Nabaraj</sapn> Malla</h2>
+        </div>
+      </div>
+    </div>
+    <!-- ----------- About Section ---------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col1">
+            <img src="assets/dummyImage1.avif" />
+            <!-- <img src="assets/dummyImage2.png" /> -->
+          </div>
+          <div class="about-col2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem
+              debitis recusandae id minus quo iusto quis optio illum, veritatis
+              aliquam cum esse minima voluptate aut labore mollitia a accusamus
+              quos?
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Html</span> <br />CSS framework</li>
+                <li><span>CSS</span> <br />Nodejs Web Application framework</li>
+                <li><span>DSA</span> <br />Problem Solving Foundation</li>
+                <li><span>Bootstrap</span> <br />CSS framework</li>
+                <li>
+                  <span>Express</span> <br />Nodejs Web Application framework
+                </li>
+                <li><span>DSA</span> <br />Problem Solving Foundation</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>frehser</span> <br />CSS framework</li>
+                <li><span>CSS</span> <br />Nodejs Web Application framework</li>
+                <li><span>DSA</span> <br />Problem Solving Foundation</li>
+                <li><span>Bootstrap</span> <br />CSS framework</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>MAC</span> <br />CSS framework</li>
+                <li><span>CSS</span> <br />Nodejs Web Application framework</li>
+                <li><span>DSA</span> <br />Problem Solving Foundation</li>
+                <li><span>Bootstrap</span> <br />CSS framework</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
