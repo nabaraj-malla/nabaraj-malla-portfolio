@@ -35,13 +35,15 @@
         <nav>
           <!-- <img src="" class="logo" /> -->
           <h1 class="author"><span style="color: #ff004f">N</span>abaraj.</h1>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Service</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>Web Developer</p>
@@ -55,7 +57,6 @@
         <div class="row">
           <div class="about-col1">
             <img src="assets/dummyImage1.avif" />
-            <!-- <img src="assets/dummyImage2.png" /> -->
           </div>
           <div class="about-col2">
             <h1 class="sub-title">About Me</h1>
@@ -192,7 +193,55 @@
         <a href="#" class="btn">See more</a>
       </div>
     </div>
-
+    <!-- ------------------ service section ------------------ -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sut-title">Contact Me</h1>
+            <p><i class="fa-solid fa-envelope"></i>contact@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>14388489494</p>
+            <div class="social-icons">
+              <a href="https://github.com/nabaraj-malla"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/nabaraj-malla-45b0aa244/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://stackoverflow.com/users/19035233/nabaraj-malla"
+                ><i class="fa-brands fa-stack-overflow"></i
+              ></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div>
+              <a href="assets/express-logo.png" download class="btn btn2"
+                >Download CV</a
+              >
+            </div>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="name" placeholder="Your name" required />
+              <input
+                type="text"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows="2"
+              ></textarea>
+              <button type="submit" class="btn btn2">submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © Nabaraj Malla</p>
+      </div>
+    </div>
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
@@ -208,6 +257,16 @@
 
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sidemenu.style.right = "-200px";
       }
     </script>
   </body>
