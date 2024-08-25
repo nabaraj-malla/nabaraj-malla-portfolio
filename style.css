@@ -290,6 +290,10 @@ nav ul li a:hover::after{
     background: #ff004f;
 }
 
+h3.note{
+    color: #57a0db
+}
+
 /* ---------------- Contact ------------------- */
 .contact-left{
     flex-basis: 35%;
